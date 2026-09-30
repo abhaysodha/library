@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "exercises": "node run-exercises.js",
-    "server": "node express-app/server.js",
-    "test": "node --test tests/*.test.js"
+    "server": "node express-app/server.js"
   },
   "dependencies": {
     "express": "^5.2.1",
