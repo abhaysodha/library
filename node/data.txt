@@ -1,0 +1,7 @@
+my name is abhay and i am creating testing data for file read and line count
+line 1 
+line 2 
+line 3 
+line 4
+
+

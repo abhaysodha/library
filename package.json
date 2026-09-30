@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^5.2.1",
+    "mongoose": "^9.10.3",
     "zod": "^4.6.5"
   }
 }
