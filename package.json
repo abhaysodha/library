@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "exercises": "node run-exercises.js",
+    "exercises": "node exercises.js",
     "server": "node express-app/server.js"
   },
   "dependencies": {

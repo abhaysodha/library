@@ -68,3 +68,28 @@ export class EBook extends Book {
     return price * 0.95;
   }
 }
+
+console.log('A1 names:', availableNames);
+console.log('A1 total stock value:', totalStockValue);
+console.log('A1 updated book:', updatedBook);
+console.log('A1 original stock:', items.find(book => book.id === 3).stock);
+console.log('A1 others:', others);
+
+const limiter = createLimiter(3);
+console.log('A2 uses:', [1, 2, 3, 4, 5].map(() => limiter.use()));
+console.log('A2 remaining:', limiter.remaining());
+limiter.reset();
+console.log('A2 remaining after reset:', limiter.remaining());
+
+
+await loadDashboard();
+await loadDashboard(true);
+
+
+const firstBook = items[0];
+const printedBook = new Book(firstBook.id, firstBook.name, firstBook.price);
+const ebook = new EBook(firstBook.id, firstBook.name, firstBook.price, 12);
+console.log('A4 Book, 10% off:', printedBook.discountedPrice(10));
+console.log('A4 EBook, 10% plus 5% off:', ebook.discountedPrice(10));
+console.log('A4 method on instance:', Object.hasOwn(printedBook, 'discountedPrice'));
+console.log('A4 method on prototype:', Object.hasOwn(Book.prototype, 'discountedPrice'));
